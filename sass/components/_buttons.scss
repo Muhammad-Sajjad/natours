@@ -1,6 +1,6 @@
 .btn {
   &:link,
-  btn:visited {
+  &:visited {
     text-decoration: none;
     padding: 15px 40px;
     text-transform: uppercase;
@@ -9,7 +9,7 @@
     position: relative;
   }
   &-white {
-    background-color: $color-white !important;
+    background-color: $color-white;
     color: $color-grey;
     display: inline-block;
   }
@@ -47,5 +47,29 @@
   }
   &-animated {
     animation: moveInBottom 1s;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: 1rem;
+    text-decoration: none;
+    color: $green-dark;
+    display: inline-block;
+    border-bottom: 1px solid $green-dark;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $green-dark;
+    transform: translateY(-2px);
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
