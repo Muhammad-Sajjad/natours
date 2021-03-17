@@ -14,6 +14,20 @@
     display: inline-block;
   }
 
+  &-white::after {
+    background-color: $color-white;
+  }
+
+  &-green {
+    background-color: $green-dark;
+    color: $color-white;
+    display: inline-block;
+  }
+
+  &-green::after {
+    background-color: $green-dark;
+  }
+
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 7px 7px 0 rgba($color-black, 0.2);
@@ -35,10 +49,6 @@
     border-radius: 100px;
     z-index: -1;
     transition: 0.4s;
-  }
-
-  &-white::after {
-    background-color: $color-white;
   }
 
   &:hover::after {
