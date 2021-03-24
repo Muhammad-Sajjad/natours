@@ -1,0 +1,17 @@
+.form {
+  &_group {
+  }
+  &_input {
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    font-family: inherit;
+    border-radius: 2px;
+    border-color: rgba($color-white, 0.5);
+  }
+  &_input:focus {
+    outline: none;
+  }
+  &_label {
+  }
+}

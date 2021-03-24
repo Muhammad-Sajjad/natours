@@ -85,6 +85,20 @@ Dark green: #28b485
 .u-margin-top-huge {
   margin-top: 8rem; }
 
+.bg-video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  opacity: 0.15;
+  z-index: -1; }
+  .bg-video_content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
 .btn:link, .btn:visited {
   text-decoration: none;
   padding: 15px 40px;
@@ -283,6 +297,47 @@ Dark green: #28b485
     font-size: 4rem;
     font-weight: 100; }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  padding: 4rem;
+  font-size: 1rem;
+  background-color: rgba(247, 247, 247, 0.5);
+  transform: skewX(-12deg); }
+  .story > * {
+    transform: skewX(12deg); }
+  .story_shape {
+    width: 10rem;
+    height: 10rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    position: relative; }
+  .story_img {
+    height: 100%;
+    transition: 0.4s;
+    transform: scale(1.2); }
+  .story_caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.4s;
+    backface-visibility: hidden; }
+  .story:hover .story_caption {
+    opacity: 10;
+    transform: translate(-50%, -50%); }
+  .story:hover .story_img {
+    transform: scale(1);
+    filter: blur(3px) brightness(80%); }
+
 .about {
   position: relative;
   bottom: 20vh;
@@ -322,6 +377,24 @@ Dark green: #28b485
   padding: 25rem 0 15rem 0;
   margin-top: -15rem;
   background-color: #f7f7f7; }
+
+.section-stories {
+  padding: 10rem 0;
+  position: relative; }
+
+.section-book {
+  padding: 10rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../../img/nat-10.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.7);
+  height: 30rem; }
+  .book_form {
+    width: 50%;
+    padding: 3.5rem; }
 
 body {
   padding: 30px;
