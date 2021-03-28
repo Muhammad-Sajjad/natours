@@ -99,13 +99,15 @@ Dark green: #28b485
     height: 100%;
     object-fit: cover; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-decoration: none;
   padding: 15px 40px;
   text-transform: uppercase;
   border-radius: 100px;
   transition: all 0.2s;
-  position: relative; }
+  position: relative;
+  border: none;
+  cursor: pointer; }
 
 .btn-white {
   background-color: #fff;
@@ -127,7 +129,8 @@ Dark green: #28b485
   transform: translateY(-3px);
   box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2); }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translateY(-1px);
   box-shadow: 0 3.5px 3.5px 0 rgba(0, 0, 0, 0.2); }
 
@@ -338,6 +341,79 @@ Dark green: #28b485
     transform: scale(1);
     filter: blur(3px) brightness(80%); }
 
+.form_group:not(:last-child) {
+  margin-bottom: 0.25rem; }
+
+.form_input {
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  width: 70%;
+  border: none;
+  font-family: inherit;
+  border-radius: 2px;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 3px solid transparent;
+  transition: all 0.4s;
+  display: block; }
+  .form_input:focus {
+    outline: none;
+    box-shadow: 0 1rem 1.2rem rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #28b485; }
+  .form_input:focus:invalid {
+    border-bottom: 3px solid #ff7730; }
+
+.form_label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-left: 1.25rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s; }
+
+.form_input:placeholder-shown + .form_label {
+  opacity: 0;
+  transform: translateY(-2.5rem); }
+
+.form_radio-group {
+  width: 48%;
+  display: inline-block;
+  padding-top: 0.25rem; }
+
+.form_radio-input {
+  display: none; }
+
+.form_radio-label {
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 2.5rem; }
+
+.form_radio-button {
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 5px solid #28b485;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.25rem; }
+  .form_radio-button::after {
+    content: "";
+    display: block;
+    height: 0.9rem;
+    width: 0.9rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28b485;
+    opacity: 0;
+    transition: opacity 0.2s; }
+
+.form_radio-input:checked ~ .form_radio-label .form_radio-button::after {
+  opacity: 1; }
+
 .about {
   position: relative;
   bottom: 20vh;
@@ -394,7 +470,7 @@ Dark green: #28b485
   height: 30rem; }
   .book_form {
     width: 50%;
-    padding: 3.5rem; }
+    padding: 3rem; }
 
 body {
   padding: 30px;
