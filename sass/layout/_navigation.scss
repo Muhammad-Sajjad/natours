@@ -78,7 +78,7 @@
   }
 
   &_checkbox:checked ~ &_background {
-    transform: scale(80);
+    transform: scale(90);
     transition: all 0.6s;
   }
   &_checkbox:checked ~ &_nav {

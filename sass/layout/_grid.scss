@@ -5,13 +5,28 @@
   &:not(:first-child) {
     margin-top: $gutter-vertical;
   }
+
+  @include respond(tab-port) {
+    max-width: 39rem !important;
+    // padding: 0 1rem;
+  }
+
   @include clearfix;
 }
 [class^="col-"] {
   float: left;
 
+  @include respond(tab-port) {
+    width: 100% !important;
+  }
+
   &:not(:first-child) {
     margin-left: $gutter-horizontal;
+
+    @include respond(tab-port) {
+      margin-left: 0;
+      margin-top: $gutter-vertical;
+    }
   }
 }
 

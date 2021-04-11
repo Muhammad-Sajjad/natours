@@ -1,5 +1,4 @@
 body {
-  padding: 30px;
   font-family: "lato";
 }
 
@@ -10,6 +9,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
+  z-index: 1;
   background-position: center;
   background-size: cover;
   background-image: linear-gradient(
@@ -20,6 +20,10 @@ body {
     url(../img/hero.jpg);
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
 }
 
 .logo-box {
