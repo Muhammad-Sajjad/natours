@@ -533,7 +533,7 @@ body {
       padding: 30vh 0 0 0; } }
   @media (max-width: 37.5em) {
     .about {
-      padding: 30vh 0 10vh 0; } }
+      padding: 30vh 0 30vh 0; } }
 
 .section-features {
   padding: 15rem 0;
@@ -546,7 +546,7 @@ body {
     transform: skewY(7deg); }
   @media (max-width: 56.25em) {
     .section-features {
-      margin-top: -30rem; } }
+      margin-top: -50rem; } }
 
 .section-tours {
   height: 95vh;
@@ -558,7 +558,7 @@ body {
       padding: 25rem 0 40rem 0; } }
   @media (max-width: 37.5em) {
     .section-tours {
-      padding: 25rem 0 60rem 0; } }
+      padding: 25rem 0 70rem 0; } }
 
 .section-stories {
   padding: 10rem 0;
