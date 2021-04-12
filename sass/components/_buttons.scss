@@ -12,6 +12,10 @@
     // For BUTTON
     border: none;
     cursor: pointer;
+
+    @include respond(phone) {
+      padding: 5px 20px;
+    }
   }
   &-white {
     background-color: $color-white;
