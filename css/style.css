@@ -423,6 +423,11 @@ body {
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     position: relative; }
+    @media (max-width: 37.5em) {
+      .story_shape {
+        float: none;
+        shape-outside: circle(50% at 40% 50%);
+        clip-path: circle(40% at 50% 50%); } }
   .story_img {
     height: 100%;
     transition: 0.4s;

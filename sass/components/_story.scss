@@ -20,6 +20,12 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     position: relative;
+
+    @include respond(phone) {
+      float: none;
+      shape-outside: circle(50% at 40% 50%);
+      clip-path: circle(40% at 50% 50%);
+    }
   }
   &_img {
     height: 100%;
