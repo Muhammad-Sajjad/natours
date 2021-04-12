@@ -14,7 +14,7 @@
     cursor: pointer;
 
     @include respond(phone) {
-      padding: 5px 20px;
+      padding: 10px 10px;
     }
   }
   &-white {

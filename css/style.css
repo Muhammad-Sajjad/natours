@@ -215,7 +215,7 @@ body {
   cursor: pointer; }
   @media (max-width: 37.5em) {
     .btn, .btn:link, .btn:visited {
-      padding: 5px 20px; } }
+      padding: 10px 10px; } }
 
 .btn-white {
   background-color: #fff;
